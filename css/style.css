@@ -1,0 +1,167 @@
+@charset "UTF-8";
+:root {
+    --corprimaria: #49a09d;
+    --corprimaria-lighter: color-mix(in srgb,var(--corprimaria),#FFF 50%);
+    --corsecundaria: #5f2c82;
+    --corsecundaria-lighter: color-mix(in srgb,var(--corsecundaria),#FFF 25%);
+}
+
+/* MOBILE FIRST VERSION */
+@media all {
+    
+    .material-symbols-outlined {
+        font-variation-settings:
+        'FILL' 0,
+        'wght' 400,
+        'GRAD' 0,
+        'opsz' 24
+    }
+
+    * {
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+    }
+    
+    body, html {
+        background-color: var(--corsecundaria);
+        height: 100vh;
+        width: 100vw;
+    }
+    
+    main {
+        height: 100vh;
+        width: 100vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    section#login {
+        width: 280px;
+        height: 500px;
+        border-radius: 24px;
+        background-color: white;
+        overflow: hidden;
+        box-shadow: 0px 0px 10px rgba(0,0,0,.4);
+
+        transition: width .4s, height .4s;
+        transition-timing-function: ease;
+    }
+    
+    section#login #image {
+        height: 200px;
+        background-image: url(../images/background.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+    }
+    
+    section#login #form {
+        display: block;
+        padding: 12px;
+    }
+
+    section#login #form h1 {
+        text-align: center;
+        font-variant: s;
+        margin-bottom: 12px;
+    }
+
+    section#login #form p {
+        text-align: center;
+        font-size: .7em;
+    }
+
+    div#form form {
+        margin-top: 12px;
+    }
+
+
+    /* CAMPOS Login e Senha */
+    div.campo {
+        height: 36px;
+        margin-bottom: 8px;
+        background-color: var(--corsecundaria-lighter);
+        border: 2px solid var(--corsecundaria-lighter);
+        border-radius: 8px;
+        box-shadow: inset 1px 1px 2px rgba(0, 0, 0, 0.2);
+    }
+
+    div.campo i {
+        color: white;
+        font-size: 2em;
+        width: 40px;
+        padding-left: 4px;
+    }
+
+    div.campo input {
+        width: calc(100% - 45px);
+        height: 100%;
+        padding: 4px;
+        font-size: 1em;
+        color: white;
+        border: none;
+        border-radius: 8px;
+        background-color: var(--corprimaria-lighter);
+        transform: translateY(-9px);
+    }
+
+    div.campo input:focus-within {
+        outline: none;
+        color: black;
+        background-color: white;
+    }
+
+    div.campo label {
+        display: none;
+    }
+
+
+    /* button ENTRAR */
+    div#form form > input[type=submit] {
+        display: block;
+        width: 100%;
+        height: 36px;
+        cursor: pointer;
+        font-weight: bold;
+        color: white;
+        background-color: var(--corprimaria);
+        box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+        border: 1px solid var(--corsecundaria);
+        border-radius: 4px;
+        margin: 20px 0 8px 0;
+    }
+
+    div#form form > input[type=submit]:hover {
+        background-color: #5bc7c3;
+    }
+
+    /* button ESQUECI A SENHA */
+    div#form form > a.button {
+        display: block;
+        width: 100%;
+        height: 36px;
+        line-height: 36px;
+        text-align: center;
+        text-decoration: none;
+        font-size: .8em;
+        color: var(--corprimaria);
+        background-color: white;
+        box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+        border: 1px solid var(--corprimaria);
+        border-radius: 4px;
+    }
+
+    div#form form > a.button:hover {
+        color: white;
+        background-color: var(--corprimaria-lighter);
+    }
+
+    div#form form > a.button > i {
+        padding-left: 4px;
+        font-size: .9em;
+    }
+}
+
