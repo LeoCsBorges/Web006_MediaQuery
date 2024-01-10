@@ -40,7 +40,7 @@
     
     section#login {
         width: 280px;
-        height: 500px;
+        height: 540px;
         border-radius: 24px;
         background-color: white;
         overflow: hidden;
@@ -71,7 +71,7 @@
 
     section#login #form p {
         text-align: center;
-        font-size: .7em;
+        font-size: .6em;
     }
 
     div#form form {
@@ -105,6 +105,7 @@
         border: none;
         border-radius: 8px;
         background-color: var(--corprimaria-lighter);
+
         transform: translateY(-9px);
     }
 
@@ -164,4 +165,3 @@
         font-size: .9em;
     }
 }
-
